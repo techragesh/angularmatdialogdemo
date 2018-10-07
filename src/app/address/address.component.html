@@ -1,0 +1,52 @@
+<mat-card-header>
+  <mat-toolbar class="toolbar">
+    <mat-card-title>Address Information</mat-card-title>
+    <span class="toolbar-spacer"></span>
+    <mat-icon (click)="onCancel()">cancel</mat-icon>
+  </mat-toolbar>
+</mat-card-header>
+<br />
+<mat-card-content>
+  <div class="container">
+    <form [formGroup]="addressForm" (submit)=onSubmit()>
+      <div class="form-group">
+        <div class="row">
+          <div class="col-md-6">
+            <label><b>First Name:</b></label>
+            <input type="text" formControlName="firstName" class="form-control">
+          </div>
+          <div class="col-md-6">
+            <label><b>Last Name:</b></label>
+            <input type="text" formControlName="lastName" class="form-control">
+          </div>
+        </div>
+        <br />
+        <div class="row">
+          <div class="col-md-12">
+            <label><b>Address:</b></label>
+            <textarea formControlName="address" class="form-control"></textarea>
+          </div>
+        </div>
+        <br />
+        <div class="row">
+          <div class="col-md-6">
+            <label><b>Post Code:</b></label>
+            <input type="text" formControlName="postCode" class="form-control">
+          </div>
+          <div class="col-md-6">
+            <label><b>City:</b></label>
+            <input type="text" formControlName="city" class="form-control">
+          </div>
+        </div>
+        <br />
+        <div class="row">
+          <div class="col-md-6">
+            <button type="submit" class="btn btn-success">
+              <mat-icon>save</mat-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</mat-card-content>
